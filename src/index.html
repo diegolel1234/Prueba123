@@ -127,6 +127,32 @@
         </ion-header>
       </ion-tab>
 
+      <ion-tab tab="login" style="background-color: white;">
+        <ion-card center>
+          <ion-card-header>
+            Registro de usuario
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              <ion-item>
+                <ion-label fixed>Correo:</ion-label>
+                <ion-input type="text"[(ngModel)]="user"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label fixed>Contraseña:</ion-label>
+                <ion-input type="password"[(ngModel)]="pass"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label fixed>Repetir contraseña::</ion-label>
+                <ion-input type="password"[(ngModel)]="pass"></ion-input>
+              </ion-item>
+            </ion-list>
+            <ion-button color="primary">Registar datos</ion-button>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-tab>
+
       <ion-tab-bar slot="bottom">
         <ion-tab-button tab="schedule">
           <ion-icon name="home"></ion-icon>
@@ -141,6 +167,11 @@
         <ion-tab-button tab="about">
           <ion-icon name="help-circle-outline"></ion-icon>
           <ion-label>Ayuda</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="login">
+          <ion-icon name="log-in-outline"></ion-icon>
+          <ion-label>Ingresa</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
